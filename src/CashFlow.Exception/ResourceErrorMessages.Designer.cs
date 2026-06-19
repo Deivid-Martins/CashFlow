@@ -97,7 +97,7 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unknown Error.
+        ///   Looks up a localized string similar to Unknown error.
         /// </summary>
         public static string UNKNOWN_ERROR {
             get {
