@@ -5,12 +5,9 @@ namespace CashFlow.Infrastructure.DataAccess;
 
 internal class CashFlowDbContext : DbContext
 {
+    public CashFlowDbContext(DbContextOptions options) : base(options) { }
+
     public DbSet<Expense> Expenses { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        var connectionString = "Host=ep-fancy-fire-acda0gon-pooler.sa-east-1.aws.neon.tech; Database=neondb; Username=neondb_owner; Password=npg_pXwFcuIxZ0J8; SSL Mode=VerifyFull; Channel Binding=Require;";
-
-        optionsBuilder.UseNpgsql(connectionString);
-    }
+    
 }
